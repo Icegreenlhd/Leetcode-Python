@@ -2,7 +2,7 @@
 # ---
 # jupyter:
 #   jupytext:
-#     formats: ipynb,py:light
+#     formats: ipynb,py
 #     text_representation:
 #       extension: .py
 #       format_name: light
@@ -29,8 +29,7 @@
 # 链接：https://leetcode-cn.com/problems/two-sum
 # 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 
-
-#  mysolution
+# mysolution
 class Solution(object):
     def twoSum(self, nums, target):
         """
@@ -39,15 +38,15 @@ class Solution(object):
         :rtype: List[int]
         """
         num_dict = dict()
-
+        
         for i, num in enumerate(nums):
             if target - num not in num_dict:
                 num_dict[num] = i
             else:
-                return [num_dict[target - num], i]
+                return [num_dict[target-num], i]
 
 
-#  leetcode python
+# leetcode python
 class Solution(object):
     def twoSum(self, nums, target):
         """
@@ -55,15 +54,15 @@ class Solution(object):
         :type target: int
         :rtype: List[int]
         """
-
+        
         num_to_index = {}
-
+        
         for i, num in enumerate(nums):
             if target - num in num_to_index:
                 return [num_to_index[target - num], i]
-
+            
             num_to_index[num] = i
-        return []  # no sum
+        return [] # no sum
 
 
 # input
@@ -73,3 +72,4 @@ solution = Solution()
 
 # + pycharm={"name": "#%%\n"}
 solution.twoSum(nums, target)
+
