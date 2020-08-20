@@ -42,7 +42,7 @@ class Solution(object):
 import unittest
 
 
-class LeetcodeTest0057(unittest.TestCase):
+class LeetcodeTest0058(unittest.TestCase):
     solution = Solution()
 
     def test_case1(self):
