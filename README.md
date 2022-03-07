@@ -26,7 +26,7 @@ class LeetcodeTest(unittest.TestCase):
     def test_case1(self):
         test_input = 
         test_output = 
-        self.assertEquals(self.solution(test_input), test_output)
+        self.assertEqual(self.solution(test_input), test_output)
 
 unittest.main(argv=['ignored', '-v'], exit=False)
 ```
