@@ -30,4 +30,29 @@ class LeetcodeTest(unittest.TestCase):
 
 unittest.main(argv=['ignored', '-v'], exit=False)
 ```
+Tree initialization
+```python
+class TreeNode(object):
+    def __init__(self, x):
+        self.val = x
+        self.left = None
+        self.right = None
+
+def init_bst(tree):
+    t = tree.copy()
+    root = TreeNode(t.pop(0))
+    tree_list = [root]
+    while len(t) > 0:
+        size = len(tree_list)
+        for i in range(size):
+            temp = tree_list.pop(0)
+            if temp != None:
+                left = t.pop(0) if len(t) > 0 else None
+                temp.left  = TreeNode(left) if left else None
+                right = t.pop(0) if len(t) > 0 else None
+                temp.right  = TreeNode(right) if right else None
+                tree_list.append(temp.left)
+                tree_list.append(temp.right)
+    return root
+```
 <!-- #endregion -->
